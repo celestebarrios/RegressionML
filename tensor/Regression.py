@@ -28,7 +28,8 @@ print(accuracy)
 
 with open("studentmodel.pickle", "wb") as f:
     pickle.dump(linear, f)
-
+pickle_in = open('studentmodel.pickle', 'rb')
+linear =  pickle.load(pickle_in)
 #Viewing The Constants
 print('Coefficient: \n', linear.coef_)
 print('Intercept: \n', linear.intercept_)
